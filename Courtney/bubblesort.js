@@ -68,4 +68,4 @@ var bubbleSort = function(array) {
 // EC: still O(n^2) since we're talking worst case
 // Moar EC: nope, it is still quadratic time, because even though there are fewer, it still grows at a polynomial rate
 
-console.log(bubbleSort([5,4,3,2,1]));
+console.log(bubbleSort([6,5,4,3,2,1]));
