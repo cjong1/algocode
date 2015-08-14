@@ -11,6 +11,11 @@ Could you solve it with constant space complexity?
 (Note: The output array does not count as extra space for the purpose of space complexity analysis.)
 */
 
+
+// First do WITH division
+  // loop through to obtain the product.
+  // then subsequently, divide by each element.
+
 var productExceptSelf = function(arrayOfNums) {
     
 };
