@@ -10,7 +10,7 @@ var bubbleSort = function(array) {
     for (var j = 0; j < limit; j++) {
       var el = array[j];
       var next = array[j+1];
-      // compar
+      // compare
       if (el > next) {
         // swap
         array[j] = next;
