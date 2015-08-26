@@ -2,7 +2,6 @@
 var i;
 
 var bubbleSort = function(array) {
-  // Your code here.
   for (i = 0; i < array.length;i++) {
     var swapHappened = false;
     // a single pass through
