@@ -17,7 +17,20 @@ var commonSuffix = function(arr){
     equalized.push(word.substr(word.length-shortest.length));
   }
 
-  return suff;
+  var cutoff = shortest.length;
+
+  for(var j = shortest.length-1; j>=0; j--) {
+    // go through each word
+    for(var k = 0; k < equalized.length; k++) {
+      var eachWord = equalized[k];
+      if (eachWord[j] !== shortest[j]) {
+        // returns up to where the difference occured
+        return shortest.slice(j+1);
+      }
+    }
+  }
+  // the only way to reach this return is if the previous conditional return never fired
+  return shortest;
 };
 
 console.log(commonSuffix(["carnation", "persuasion", "satisfaction"])); // 'ion'
