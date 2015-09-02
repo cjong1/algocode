@@ -17,8 +17,6 @@ var commonSuffix = function(arr){
     equalized.push(word.substr(word.length-shortest.length));
   }
 
-  var cutoff = shortest.length;
-
   for(var j = shortest.length-1; j>=0; j--) {
     // go through each word
     for(var k = 0; k < equalized.length; k++) {
