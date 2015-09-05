@@ -13,3 +13,16 @@ Be polite! and open the doors for him: you are debouncing the elevator departure
 Consider that the same situation can happen again with a third person, 
 and so on... probably delaying the departure several minutes.
 */
+
+var debounce = function(fn, delay) {
+  var timer = null;
+  return function(){
+    var context = this;
+    var args = arguments;
+
+    clearTimeout(timer);
+    timer = setTimeout(function(){
+      fn.apply(context, args);
+    }, delay);
+  }
+}
