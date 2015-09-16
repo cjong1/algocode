@@ -29,13 +29,11 @@ var partition = function(array, p, r) {
   var pivot = r;
 
   while (upperBound <r){
-    // if (array[upperBound] > array[pivot]){
-    //   upperBound++;
-    // }
     if (array[upperBound] <= array[pivot]) {
       swap(array,upperBound, lowerBound);
       lowerBound++;
     }
+    // either way, the upperbound advances
     upperBound++;
   }
 
@@ -64,7 +62,6 @@ var quickSort = function(array, left ,right) {
     quickSort(array, pivot+1, right);
   }
 }
-
 
 
 // sort the whole thing
