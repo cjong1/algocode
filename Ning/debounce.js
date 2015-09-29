@@ -14,15 +14,16 @@ Consider that the same situation can happen again with a third person,
 and so on... probably delaying the departure several minutes.
 */
 
-var debounce = function(fn, delay) {
+var debounce = function(fn, delay){
   var timer = null;
-  return function(){
+  return function() {
     var context = this;
-    var args = arguments;
+    var args = Array.prototype.slice.call(arguments); // could techincally just use arguments
 
-    clearTimeout(timer);
+    // reset timer
+    clearTimeout(timer);  
     timer = setTimeout(function(){
-      fn.apply(context, args);
+      fn.apply(this, args);
     }, delay);
   }
-}
+};
